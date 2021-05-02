@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slide1{
+        background-image: url("img/visual1.jpg");
+      }
+      .slide2{
+        background-image: url("img/visual2.jpg");
+      }
+      .slide3{
+        background-image: url("img/visual3.jpg");
+      }
+      .slide4{
+        background-image: url("img/visual4.jpg");
+      }
+    </style>
+</head>
+<body>
+  <div class="swiper-container mySwiper">
+    <div class="swiper-wrapper">
+      <div class="slide1 swiper-slide">
+        <div class="text">
+          <h1>교복맛집에서<br>스마트하게+</h1>
+          <p>움직임은 편하고 스타일은 예쁜 스마트학생복</p>
+        </div>
+      </div>
+      <div class="slide2 swiper-slide">
+        <div class="text">
+          <h1>교복맛집에서<br>스마트하게+</h1>
+          <p>움직임은 편하고 스타일은 예쁜 스마트학생복</p>
+        </div>
+      </div>
+      <div class="slide3 swiper-slide">
+        <div class="text">
+          <h1>19년 연속<br>브랜드 파워 1위</h1>
+          <p>소비자가 가장 신뢰하는 대한민국 대표 브랜드 스마트 학생복</p>
+        </div>
+      </div>
+      <div class="slide4 swiper-slide">
+        <div class="text">
+          <h1>제품 안전의 날<br>장관상 수상</h1>
+          <p>업계 최초 2020년 제품 안전의 날 산업통상자원부 장관상 수상</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+  </div>
+
+    <!-- Initialize Swiper -->
+ <script>
+      var swiper = new Swiper(".banner-swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+    delay : 4000},   // 시간 설정
+    loop : true
+      });
+
+    </script>
+  </body>
+</html>
