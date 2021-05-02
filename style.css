@@ -50,19 +50,24 @@ header nav .drop-down {
   z-index: 10;
   background-color: var(--sky-blue-color);
   width: 100%;
-  height: 100vh;
+  height: 1300px;
   visibility: hidden;
   top: 74px;
   left: 0px;
+  padding-top: var(--small-padding);
 }
 
 label {
   cursor: pointer;
   font-size: var(--big-font);
+  display: block;
+  margin-bottom: var(--small-padding);
+  margin-left: var(--small-padding);
 }
 label:after {
   content: "\f078";
   font-family: fontawesome, sans-serif;
+  padding-left: calc(var(--small-padding) / 2);
 }
 label:not(:first-child)::before,
 label:last-child::after,
@@ -71,15 +76,13 @@ label:last-child::after,
   display: block;
   width: 95%;
   border-bottom: 1px solid rgb(179, 179, 179);
+  margin-bottom: var(--small-padding);
 }
 
 input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked {
-  color: rgb(58, 85, 209);
-}
 input[type="checkbox"]:checked + ul {
   display: none;
 }
@@ -93,6 +96,19 @@ header .search {
 header .nav_toogleBtn {
   font-size: var(--medium-font);
 }
+
+header .nav .drop-down > ul > li {
+  padding-bottom: calc(var(--small-padding) / 2);
+}
+header .nav .drop-down > ul > li a {
+  padding-left: var(--small-padding);
+}
+header nav .drop-down ul li a:hover {
+  text-decoration: underline;
+  color: rgb(27, 42, 105);
+  transition: all 0.2s;
+}
+
 /*- ----main------ */
 /* banner */
 .banner .swiper-container {
@@ -618,19 +634,15 @@ header .nav_toogleBtn {
     visibility: hidden;
   }
   header nav .drop-down ul {
-    transform: translateX(-47px);
+    transform: translateX(-56px);
   }
   header nav .drop-down ul ~ ul {
-    padding-left: 45px;
+    padding-left: 23px;
   }
   header nav .drop-down ul li + li {
     padding-top: 20px;
   }
-  header nav .drop-down ul li a:hover {
-    text-decoration: underline;
-    color: rgb(15, 28, 88);
-    transition: all 0.2s;
-  }
+
   header .search #search-bar {
     padding: 15px 30px 15px 35px;
     background-color: rgb(221, 238, 253);
@@ -831,10 +843,16 @@ header .nav_toogleBtn {
     font-size: var(--base-font);
   }
   header nav .drop-down ul ~ ul {
-    padding-left: 23px;
+    padding-left: 20px;
+  }
+  header nav .drop-down > ul > li {
+    font-size: var(--small-font);
   }
 }
 @media all and (min-width: 1024px) and (max-width: 1420px) {
+  .main .section1 .wrapper {
+    width: 95%;
+  }
   .section1 .award .fst,
   .section1 .award .scd {
     font-size: var(--base-font);
